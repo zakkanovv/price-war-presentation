@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.add('js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#17483a" />
+<title>Marketing Management — Agricultural &amp; Food Industry</title>
+<meta name="description" content="Интерактивная презентация по дисциплине Marketing Management: Price War, Promotion, ROI." />
+
+<meta property="og:title" content="Marketing Management — Agricultural & Food Industry" />
+<meta property="og:description" content="Price War · Promotion · ROI — практические задачи" />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<a href="#deck" class="skip-link">Перейти к содержимому презентации</a>
+
+<div class="progressbar" aria-hidden="true">
+  <div class="progressbar__fill" id="progressFill"></div>
+</div>
+
+<header class="topnav">
+  <button class="topnav__iconbtn topnav__iconbtn--menu" id="menuBtn" aria-label="Оглавление"><i data-lucide="menu"></i></button>
+  <button class="topnav__brand" data-goto="0" aria-label="На главный экран">
+    <span class="topnav__brand-mark" aria-hidden="true">MM</span>
+    <span class="topnav__brand-text">Marketing<span>Management</span></span>
+  </button>
+  <nav class="topnav__sections" aria-label="Разделы презентации">
+    <button class="topnav__link" data-goto="1"><span class="topnav__link-num">01</span> Price War</button>
+    <button class="topnav__link" data-goto="13"><span class="topnav__link-num">02</span> Promotion</button>
+    <button class="topnav__link" data-goto="25"><span class="topnav__link-num">03</span> ROI</button>
+  </nav>
+  <div class="topnav__meta">
+    <span class="topnav__counter" aria-live="polite"><b id="currentSlide">01</b> / <span id="totalSlides">38</span></span>
+    <button class="topnav__iconbtn" id="themeBtn" aria-label="Тёмная тема"><i data-lucide="moon"></i></button>
+    <button class="topnav__iconbtn" id="printBtn" aria-label="Печать / PDF"><i data-lucide="printer"></i></button>
+    <button class="topnav__iconbtn" id="presenterBtn" aria-label="Режим докладчика"><i data-lucide="monitor-play"></i></button>
+    <button class="topnav__iconbtn" id="helpBtn" aria-label="Горячие клавиши"><i data-lucide="help-circle"></i></button>
+    <button class="topnav__iconbtn" id="fullscreenBtn" aria-label="Полноэкранный режим"><i data-lucide="maximize"></i></button>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar__head">
+    <span>Содержание</span>
+    <button class="sidebar__close" id="sidebarClose" aria-label="Закрыть">×</button>
+  </div>
+  <nav class="sidebar__nav" id="sidebarNav"></nav>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<div class="help-overlay" id="helpOverlay" role="dialog" aria-modal="true" aria-label="Горячие клавиши">
+  <div class="help-overlay__panel">
+    <button class="help-overlay__close" id="helpClose" aria-label="Закрыть">×</button>
+    <h2>Горячие клавиши</h2>
+    <ul class="help-list">
+      <li><kbd>→</kbd> <kbd>↓</kbd> <kbd>Space</kbd> — следующий слайд</li>
+      <li><kbd>←</kbd> <kbd>↑</kbd> — предыдущий слайд</li>
+      <li><kbd>Home</kbd> / <kbd>End</kbd> — первый / последний</li>
+      <li><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> — раздел</li>
+      <li><kbd>F</kbd> — полный экран</li>
+      <li><kbd>P</kbd> — печать / PDF</li>
+      <li><kbd>D</kbd> — тёмная тема</li>
+      <li><kbd>M</kbd> — оглавление</li>
+      <li><kbd>N</kbd> — режим докладчика</li>
+      <li><kbd>?</kbd> — эта справка</li>
+    </ul>
+  </div>
+</div>
+
+<div class="info-modal" id="infoModal" role="dialog" aria-modal="true">
+  <div class="info-modal__panel">
+    <button class="info-modal__close" id="infoClose" aria-label="Закрыть">×</button>
+    <div class="info-modal__body" id="infoBody"></div>
+  </div>
+</div>
+
+<script type="application/json" id="infoData">
+{
+  "price-war": {
+    "title": "Ценовая война",
+    "body": "<p><b>Ценовая война</b> — последовательность снижений цен конкурирующими фирмами, при которой каждая сторона пытается получить долю рынка за счёт другой.</p><p>По Котлеру, ценовые войны часто начинаются из-за избыточных мощностей или однородного продукта. Итог — падение маржинальности у всех участников.</p><p><b>Примеры:</b> Pepsi vs Coca-Cola (1970-е), молочный рынок Казахстана (2019), Amazon vs Walmart.</p>"
+  },
+  "contribution": {
+    "title": "Маржинальный вклад",
+    "body": "<p><b>Contribution Margin</b> = Цена − Переменные затраты на единицу.</p><p>Показывает, сколько денег остаётся от каждой продажи на покрытие постоянных расходов и прибыль.</p><p><b>Ключевая идея:</b> снижая цену на 10%, вы теряете в марже непропорционально больше — нужно продать на 25–50% больше, чтобы просто остаться на том же уровне.</p>"
+  },
+  "roi": {
+    "title": "ROI продвижения",
+    "body": "<p><b>ROI</b> = (Чистый результат / Расходы) × 100%.</p><p>Считается <i>только</i> прирост, вызванный акцией, минус прямые расходы на промо.</p><p><b>Правило большого пальца:</b> ROI < 0 — акция убыточна. ROI 0–50% — сомнительно. ROI > 100% — успех.</p>"
+  },
+  "loyalty": {
+    "title": "Программа лояльности",
+    "body": "<p>В отличие от скидки, программа лояльности возвращает ценность <i>после</i> покупки — не разрушая восприятие цены.</p><p>Примеры: баллы, кэшбэк, персональные предложения, ранний доступ к новинкам.</p>"
+  }
+}
+</script>
+
+<main class="deck" id="deck" tabindex="-1">
+
+  <!-- COVER -->
+  <section class="slide slide--cover" id="slide-0" data-index="0" data-section="cover">
+    <div class="cover__grid" aria-hidden="true"></div>
+    <div class="cover__orb cover__orb--1" aria-hidden="true"></div>
+    <div class="cover__orb cover__orb--2" aria-hidden="true"></div>
+    <div class="slide__inner cover__inner">
+      <div class="cover__topline reveal">
+        <span class="chip chip--light">Agricultural &amp; Food Industry</span>
+        <span class="chip chip--ghost">Master's Degree · Marketing Management</span>
+      </div>
+      <div class="cover__titleblock">
+        <p class="cover__eyebrow reveal" style="--d:.05s">Discipline · Practice Tasks</p>
+        <h1 class="cover__title reveal" style="--d:.15s">
+          <span>Marketing</span><span class="cover__title-accent">Management</span>
+        </h1>
+        <p class="cover__sub reveal" style="--d:.25s">Agricultural &amp; Food Industry</p>
+        <p class="cover__tagline reveal" style="--d:.3s">
+          Три практические задачи: разобраться, почему ценовые войны разрушают маржу,
+          как построить кампанию, которая работает, и как измерить её реальный экономический эффект.
+        </p>
+      </div>
+      <div class="cover__flow reveal" style="--d:.35s">
+        <div class="flow-item"><span class="flow-item__label">Price</span><i data-lucide="arrow-right"></i></div>
+        <div class="flow-item"><span class="flow-item__label">Promotion</span><i data-lucide="arrow-right"></i></div>
+        <div class="flow-item flow-item--accent"><span class="flow-item__label">Profitability</span></div>
+      </div>
+      <div class="cover__tasks reveal" style="--d:.45s">
+        <p class="cover__tasks-title">3 Practice Tasks</p>
+        <div class="cover__tasks-grid">
+          <a class="task-mini" data-goto="1" href="#t1-price-war"><b>01</b><span>Price War</span><i data-lucide="arrow-up-right"></i></a>
+          <a class="task-mini" data-goto="13" href="#t2-promotion"><b>02</b><span>Promotion</span><i data-lucide="arrow-up-right"></i></a>
+          <a class="task-mini" data-goto="25" href="#t3-roi"><b>03</b><span>ROI</span><i data-lucide="arrow-up-right"></i></a>
+        </div>
+      </div>
+      <div class="cover__footer reveal" style="--d:.55s">
+        <div class="cover__author">
+          <div class="cover__avatar" aria-hidden="true">БЗ</div>
+          <div>
+            <p class="cover__author-name">Бауыржан Заканов</p>
+            <p class="cover__author-role">Master's Student</p>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--start" data-goto="1">Start Presentation <i data-lucide="arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="scrollhint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- TASK 1 DIVIDER -->
+  <section class="slide slide--divider" id="slide-1" data-index="1" data-section="t1" data-anchor="t1-price-war" data-notes="Открываем первую задачу. Здесь разберём, почему ценовые войны начинаются и почему выиграть в них невозможно.">
+    <div class="slide__inner">
+      <div class="divider__wrap reveal">
+        <div class="divider__num">Task 01</div>
+        <h2 class="divider__title">PRICE WAR<br><span>ANALYSIS</span></h2>
+        <p class="divider__sub">Understanding and Managing Price Wars</p>
+        <div class="divider__meta">
+          <span class="chip"><i data-lucide="swords"></i> FoodMaster vs Adal</span>
+          <span class="chip"><i data-lucide="layers"></i> 11 слайдов</span>
+        </div>
+        <p class="divider__question">Как компании конкурируют ценой — и почему ценовая война опасна для маржи?</p>
+        <ul class="divider__objectives">
+          <li><i data-lucide="check-circle-2"></i> Понять механику ценовой войны и роль чувствительности к цене</li>
+          <li><i data-lucide="check-circle-2"></i> Увидеть, как снижение цены бьёт по марже сильнее, чем кажется</li>
+          <li><i data-lucide="check-circle-2"></i> Разобрать три альтернативы ценовой войне</li>
+        </ul>
+        <button class="btn btn--ghost" data-goto="2">Начать раздел <i data-lucide="arrow-down"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S01 MARKET BATTLE -->
+  <section class="slide" id="slide-2" data-index="2" data-section="t1" data-notes="Сравниваем двух игроков. FoodMaster — массовый и федеральный. Adal — локальный и премиальный по качеству.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 01</span>
+        <h2 class="slide__title">Market Battle</h2>
+        <p class="slide__lead slide__lead--rich">
+          Молочный рынок Казахстана — около <b>$1.2 млрд</b> и растёт на 4–6% в год.
+          Пять крупнейших игроков занимают порядка <b>60% рынка</b>, остальное — локальные производители.
+          FoodMaster — федеральный лидер, Adal — сильный локальный бренд.
+        </p>
+      </header>
+      <div class="battle reveal">
+        <article class="battle__card battle__card--a">
+          <div class="battle__badge">Компания A</div>
+          <h3 class="battle__name">FOODMASTER</h3>
+          <ul class="battle__list">
+            <li><i data-lucide="target"></i><div><b>Позиционирование</b><span>Широкая доступность, массовый рынок, «молоко для каждой семьи»</span></div></li>
+            <li><i data-lucide="zap"></i><div><b>Конкурентные преимущества</b><span>Масштаб, дистрибуция во все сети, высокая узнаваемость</span></div></li>
+            <li><i data-lucide="milk"></i><div><b>Продуктовый ассортимент</b><span>Молоко, кефир, сметана, творог — базовые категории</span></div></li>
+            <li><i data-lucide="map-pin"></i><div><b>Присутствие на рынке</b><span>Федеральные и локальные сети, вся страна</span></div></li>
+          </ul>
+        </article>
+        <div class="battle__vs reveal"><span>VS</span><i data-lucide="arrow-left-right"></i></div>
+        <article class="battle__card battle__card--b">
+          <div class="battle__badge">Компания B</div>
+          <h3 class="battle__name">ADAL</h3>
+          <ul class="battle__list">
+            <li><i data-lucide="target"></i><div><b>Позиционирование</b><span>Качество и локальное производство, «свежее — значит местное»</span></div></li>
+            <li><i data-lucide="leaf"></i><div><b>Конкурентные преимущества</b><span>Свежесть, короткая цепочка поставок, доверие</span></div></li>
+            <li><i data-lucide="milk"></i><div><b>Продуктовый ассортимент</b><span>Натуральная молочная продукция, премиальные линейки</span></div></li>
+            <li><i data-lucide="map-pin"></i><div><b>Присутствие на рынке</b><span>Региональные точки, фермерские сети, локальный ритейл</span></div></li>
+          </ul>
+        </article>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p><b>Почему они сталкиваются:</b> оба целятся в средний сегмент покупателя, у которого главный критерий — доступная цена. В этой зоне конкурентное преимущество Adal в «локальности» и «качестве» размывается, и остаётся единственный универсальный аргумент — <b>цена</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S02 WHY PRICE WAR -->
+  <section class="slide" id="slide-3" data-index="3" data-section="t1" data-notes="Пять причин начала ценовой войны.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 02</span>
+        <h2 class="slide__title">Why Price War?</h2>
+        <p class="slide__lead slide__lead--rich">
+          Ценовые войны почти никогда не начинаются «потому что так захотелось».
+          За снижением всегда стоит давление рынка, поведения покупателя или конкурента.
+          Ниже — <b>пять триггеров</b>, которые запускают спираль.
+        </p>
+      </header>
+      <div class="reasons">
+        <article class="reason reveal" data-toggle>
+          <span class="reason__num">01</span>
+          <div class="reason__icon"><i data-lucide="wallet"></i></div>
+          <h3>Чувствительность покупателей к цене</h3>
+          <p>Покупатель быстро реагирует на разницу в цене и готов переключиться. Молоко — товар с высокой эластичностью спроса: при разнице 5–10% покупатель легко меняет бренд.</p>
+        </article>
+        <article class="reason reveal" style="--d:.06s" data-toggle>
+          <span class="reason__num">02</span>
+          <div class="reason__icon"><i data-lucide="store"></i></div>
+          <h3>Давление розничных сетей</h3>
+          <p>Сети требуют низкие закупочные цены и промо-активность. Если производитель отказывается — его место на полке займёт конкурент.</p>
+        </article>
+        <article class="reason reveal" style="--d:.12s" data-toggle>
+          <span class="reason__num">03</span>
+          <div class="reason__icon"><i data-lucide="pie-chart"></i></div>
+          <h3>Борьба за долю рынка</h3>
+          <p>Снижение цены — самый быстрый способ нарастить объём. Но доля, купленная ценой, редко остаётся надолго: конкурент ответит симметрично.</p>
+        </article>
+        <article class="reason reveal" style="--d:.18s" data-toggle>
+          <span class="reason__num">04</span>
+          <div class="reason__icon"><i data-lucide="trending-up"></i></div>
+          <h3>Рост затрат</h3>
+          <p>Когда себестоимость растёт, а цену поднять нельзя, компании пытаются компенсировать это объёмом — и запускают ценовую гонку.</p>
+        </article>
+        <article class="reason reveal" style="--d:.24s" data-toggle>
+          <span class="reason__num">05</span>
+          <div class="reason__icon"><i data-lucide="repeat"></i></div>
+          <h3>Ответ конкурента</h3>
+          <p>Самая частая причина. Конкурент снизил цену — вы не можете «не заметить» и снижаете вслед. Так замыкается спираль.</p>
+        </article>
+      </div>
+      <div class="example-box reveal">
+        <b>Пример из практики</b>
+        В 2019 году на молочном рынке Казахстана две компании одновременно запустили акцию «−15% на 1 литр».
+        В итоге за 6 месяцев обе потеряли по <b>8–12% маржи</b>, но <b>не изменили долю рынка</b> — покупатели просто привыкли к новой цене.
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S03 LOOP -->
+  <section class="slide" id="slide-4" data-index="4" data-section="t1" data-notes="Спираль ценовой войны.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 03</span>
+        <h2 class="slide__title">Price War Loop</h2>
+        <p class="slide__lead slide__lead--rich">
+          Классическая ловушка: <b>одно снижение цены запускает цепную реакцию</b>, которая через несколько шагов приводит
+          к падению выручки у обеих сторон. Никто не выигрывает — просто все теряют маржу.
+        </p>
+      </header>
+      <div class="loop reveal">
+        <div class="loop__step loop__step--a"><span>Компания A снижает цену</span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--price"><span>Цена <b>−10%</b></span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--buyers"><span>Покупатели переходят</span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--b"><span>Компания B отвечает симметрично</span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--price"><span>Цена <b>−10%</b></span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--a2"><span>Компания A отвечает снова</span></div>
+        <div class="loop__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="loop__step loop__step--war"><span>PRICE WAR</span></div>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p><b>Почему из ловушки сложно выйти:</b> каждая сторона боится потерять долю, если остановится первой. Но математически выигрывает не тот, кто снизил глубже, а тот, кто <b>первым предложил покупателю ценность вместо скидки</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S04 STRATEGIES -->
+  <section class="slide" id="slide-5" data-index="5" data-section="t1" data-notes="Четыре механики снижения цены.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 04</span>
+        <h2 class="slide__title">Price-Cutting Strategies</h2>
+        <p class="slide__lead slide__lead--rich">
+          Не всякое снижение цены одинаково. Первые три механики — <b>управляемые</b>:
+          компания сама решает, когда и насколько снизить цену.
+          Четвёртая — <b>реактивная</b>: компания теряет контроль и следует за рынком.
+        </p>
+      </header>
+      <div class="stratgrid">
+        <article class="strat reveal">
+          <div class="strat__icon"><i data-lucide="badge-percent"></i></div>
+          <span class="strat__num">1</span>
+          <h3>Прямое снижение цены</h3>
+          <p class="strat__price"><b>500</b> KZT <i data-lucide="arrow-right"></i> <b>450</b> KZT</p>
+          <p class="strat__when"><b>Когда:</b> избыток мощностей, нужно быстро расчистить склад.</p>
+        </article>
+        <article class="strat reveal" style="--d:.06s">
+          <div class="strat__icon"><i data-lucide="clock"></i></div>
+          <span class="strat__num">2</span>
+          <h3>Временная скидка</h3>
+          <p class="strat__price"><b>−10%</b> только в выходные</p>
+          <p class="strat__when"><b>Когда:</b> нужно привлечь трафик, не ломая базовую цену.</p>
+        </article>
+        <article class="strat reveal" style="--d:.12s">
+          <div class="strat__icon"><i data-lucide="package-plus"></i></div>
+          <span class="strat__num">3</span>
+          <h3>Покупка нескольких товаров</h3>
+          <p class="strat__price">2 упаковки <i data-lucide="arrow-right"></i> специальная цена</p>
+          <p class="strat__when"><b>Когда:</b> нужно поднять средний чек и объём.</p>
+        </article>
+        <article class="strat reveal" style="--d:.18s">
+          <div class="strat__icon"><i data-lucide="copy"></i></div>
+          <span class="strat__num">4</span>
+          <h3>Ценовое следование</h3>
+          <p class="strat__price">«Конкурент снизил — мы тоже»</p>
+          <p class="strat__when strat__when--danger"><b>Опасно:</b> вы теряете контроль над ценой.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S05 MARKET SHARE -->
+  <section class="slide" id="slide-6" data-index="6" data-section="t1" data-notes="Рост продаж не означает рост прибыли.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 05</span>
+        <h2 class="slide__title">Market Share &amp; Sales</h2>
+        <p class="slide__lead slide__lead--rich">
+          На первый взгляд ценовая война работает: <b>объём продаж растёт на 15–30%</b>.
+          Но данные Nielsen показывают: одновременно маржа падает на <b>40–60%</b>.
+          Рассмотрим это на условном примере.
+        </p>
+      </header>
+      <div class="twocol twocol--chart">
+        <div class="stats-stack reveal">
+          <div class="statcard">
+            <span class="statcard__label">До ценовой войны</span>
+            <span class="statcard__value"><span class="counter" data-count="100000">0</span></span>
+            <span class="statcard__unit">единиц в месяц</span>
+          </div>
+          <div class="statcard statcard--warm">
+            <span class="statcard__label">Во время ценовой войны</span>
+            <span class="statcard__value"><span class="counter" data-count="120000">0</span></span>
+            <span class="statcard__unit">единиц в месяц</span>
+          </div>
+          <div class="statcard statcard--accent">
+            <span class="statcard__label">Рост объёма</span>
+            <span class="statcard__value"><span class="counter" data-count="20" data-prefix="+" data-suffix="%">0%</span></span>
+            <span class="statcard__unit">к предыдущему уровню</span>
+          </div>
+          <span class="badge-example">Условный пример</span>
+        </div>
+        <div class="chartbox reveal">
+          <canvas id="chart-market-share" aria-label="График продаж до и во время ценовой войны"></canvas>
+        </div>
+      </div>
+      <div class="callout callout--warn reveal">
+        <i data-lucide="alert-triangle"></i>
+        <p><b>Важно:</b> рост продаж не означает автоматический рост прибыли. Чтобы понять реальный эффект, нужно считать маржинальный вклад — об этом на следующем слайде.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S06 MARGIN -->
+  <section class="slide" id="slide-7" data-index="7" data-section="t1" data-notes="Ключевой слайд. Двигайте слайдер — увидите break-even.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 06</span>
+        <h2 class="slide__title">Margin Problem</h2>
+        <p class="slide__lead slide__lead--rich">
+          Снижение цены <b>бьёт по марже непропорционально</b>. Цена падает на 10%, а маржа — на 25%.
+          Чтобы вернуться к прежней прибыли, нужен <b>непропорционально больший рост продаж</b>.
+          Проверьте это сами — двигайте слайдер.
+        </p>
+        <button class="btn btn--mini" data-info="contribution"><i data-lucide="info"></i> Что такое маржинальный вклад?</button>
+      </header>
+
+      <div class="margin margin--with-slider">
+        <div class="margin__cards reveal">
+          <article class="margin__card">
+            <div class="margin__tag">ДО СНИЖЕНИЯ</div>
+            <div class="margin__row"><span>Цена</span><b>500 KZT</b></div>
+            <div class="margin__row"><span>Переменные затраты</span><b>300 KZT</b></div>
+            <div class="margin__row margin__row--result"><span>Маржинальный вклад</span><b class="big">200 KZT</b></div>
+          </article>
+          <div class="margin__delta">
+            <div class="margin__delta-num">−<span id="discountVal">50</span> KZT</div>
+            <p>с каждой единицы</p>
+            <i data-lucide="arrow-right" class="margin__delta-arrow"></i>
+          </div>
+          <article class="margin__card margin__card--down">
+            <div class="margin__tag margin__tag--orange">ПОСЛЕ СНИЖЕНИЯ</div>
+            <div class="margin__row margin__row--changed"><span>Цена</span><b id="priceAfter">450 KZT</b></div>
+            <div class="margin__row"><span>Переменные затраты</span><b>300 KZT</b></div>
+            <div class="margin__row margin__row--result"><span>Маржинальный вклад</span><b class="big" id="marginAfter">150 KZT</b></div>
+          </article>
+        </div>
+
+        <div class="breakeven reveal">
+          <div class="breakeven__head">
+            <h3>Сколько нужно продать, чтобы остаться при своих?</h3>
+            <div class="breakeven__controls">
+              <label>
+                <span>Скидка</span>
+                <input type="range" id="sliderDiscount" min="0" max="30" value="10" step="1" />
+                <b id="sliderDiscountVal">10%</b>
+              </label>
+            </div>
+          </div>
+          <div class="breakeven__grid">
+            <div class="breakeven__stat">
+              <span class="breakeven__label">Прибыль с единицы</span>
+              <span class="breakeven__value" id="beUnitProfit">150 KZT</span>
+            </div>
+            <div class="breakeven__stat">
+              <span class="breakeven__label">Нужен рост продаж</span>
+              <span class="breakeven__value breakeven__value--accent" id="beGrowth">+33%</span>
+            </div>
+            <div class="breakeven__stat">
+              <span class="breakeven__label">Точка безубыточности</span>
+              <span class="breakeven__value" id="beVolume">13 333 ед.</span>
+            </div>
+          </div>
+          <div class="breakeven__bar">
+            <div class="breakeven__bar-track">
+              <div class="breakeven__bar-fill" id="beBarFill"></div>
+              <div class="breakeven__bar-marker" style="left: 25%;">
+                <span>Текущий рост</span>
+              </div>
+            </div>
+          </div>
+          <p class="breakeven__hint" id="beHint">Скидка 10% требует роста продаж минимум на 33%, чтобы не потерять прибыль.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S07 BEHAVIOR -->
+  <section class="slide" id="slide-8" data-index="8" data-section="t1" data-notes="Покупатель учится ждать скидок.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 07</span>
+        <h2 class="slide__title">Customer Behavior</h2>
+        <p class="slide__lead slide__lead--rich">
+          Самое коварное последствие ценовой войны — <b>изменение поведения покупателя</b>.
+          Он учится ждать скидки и перестаёт покупать по обычной цене.
+          Появляется эффект ожидания: спрос между акциями «замирает».
+        </p>
+      </header>
+      <div class="behavior">
+        <div class="behavior__col reveal">
+          <h3 class="behavior__title">ДО</h3>
+          <div class="behavior__tags">
+            <span class="tag tag--quality">Качество</span>
+            <span class="tag tag--trust">Доверие</span>
+            <span class="tag tag--brand">Бренд</span>
+            <span class="tag tag--price-soft">Цена</span>
+          </div>
+          <p class="behavior__caption">Покупатель выбирает по совокупности критериев.</p>
+        </div>
+        <div class="behavior__arrow reveal"><i data-lucide="arrow-right"></i></div>
+        <div class="behavior__col reveal">
+          <h3 class="behavior__title behavior__title--war">ВО ВРЕМЯ ЦЕНОВОЙ ВОЙНЫ</h3>
+          <div class="behavior__tags behavior__tags--war">
+            <span class="tag tag--war">ЦЕНА</span>
+            <span class="tag tag--war">ЦЕНА</span>
+            <span class="tag tag--war">ЦЕНА</span>
+          </div>
+          <p class="behavior__caption">Единственный критерий выбора — где дешевле.</p>
+        </div>
+      </div>
+      <div class="behavior__outcome reveal">
+        <p class="behavior__verdict">Покупатель становится всё более чувствительным к цене — и всё менее лояльным к бренду.</p>
+        <div class="behavior__quote">«Зачем покупать по обычной цене, если скоро будет скидка?»</div>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p><b>Долгосрочный эффект:</b> после войны цена возвращается, а привычка ждать скидку — остаётся. Компания теряет «полноценного» покупателя, который платит 100% цены.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S08 POSITIONING -->
+  <section class="slide" id="slide-9" data-index="9" data-section="t1" data-notes="Бренд превращается в дешёвую альтернативу.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 08</span>
+        <h2 class="slide__title">Brand Positioning</h2>
+        <p class="slide__lead slide__lead--rich">
+          Восприятие бренда — <b>невосполнимый ресурс</b>. Если бренд долго ассоциируется со скидками,
+          покупатель перестаёт воспринимать его как «качественный» и «премиальный».
+          Обратно вернуть позиционирование сложнее, чем построить с нуля.
+        </p>
+      </header>
+      <div class="positioning">
+        <div class="positioning__col reveal">
+          <h3>Сейчас</h3>
+          <div class="positioning__tags">
+            <span class="tag tag--quality">Качество</span>
+            <span class="tag tag--innovation">Инновации</span>
+            <span class="tag tag--trust">Доверие</span>
+            <span class="tag tag--value">Ценность</span>
+          </div>
+          <p class="positioning__caption">Бренд ценят за то, что он даёт покупателю.</p>
+        </div>
+        <div class="positioning__arrow reveal"><i data-lucide="arrow-down"></i></div>
+        <div class="positioning__col positioning__col--risk reveal">
+          <h3>После ценовой войны</h3>
+          <div class="positioning__tags positioning__tags--risk">
+            <span class="tag tag--lowprice">Низкая цена</span>
+            <span class="tag tag--promo">Акции</span>
+            <span class="tag tag--cheap">Дешёвая альтернатива</span>
+          </div>
+          <p class="positioning__caption">Бренд ценят только за низкую цену.</p>
+        </div>
+      </div>
+      <div class="callout callout--risk reveal">
+        <i data-lucide="shield-alert"></i>
+        <p><b>Реальный случай:</b> JCPenney в 2012 году отменил скидки, введя «честные низкие цены». Покупатели, привыкшие к акциям, восприняли это как «повышение цены» — трафик упал на 20% за квартал.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S09 RISK -->
+  <section class="slide" id="slide-10" data-index="10" data-section="t1" data-notes="Каскад: цена → маржа → прибыль → инвестиции.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 09</span>
+        <h2 class="slide__title">Business Model Risk</h2>
+        <p class="slide__lead slide__lead--rich">
+          Ценовая война — это не разовый удар, а <b>каскад</b>.
+          Сначала падает цена, потом маржа, потом прибыль — и, наконец, инвестиции.
+          Через 6–12 месяцев компания обнаруживает, что не может развиваться.
+        </p>
+      </header>
+      <div class="riskchain">
+        <div class="riskchain__steps reveal">
+          <div class="riskstep"><span>ЦЕНА</span><b>↓</b></div>
+          <div class="riskchain__arrow"><i data-lucide="arrow-down"></i></div>
+          <div class="riskstep"><span>МАРЖА</span><b>↓</b></div>
+          <div class="riskchain__arrow"><i data-lucide="arrow-down"></i></div>
+          <div class="riskstep"><span>ПРИБЫЛЬ</span><b>↓</b></div>
+          <div class="riskchain__arrow"><i data-lucide="arrow-down"></i></div>
+          <div class="riskstep riskstep--final"><span>ИНВЕСТИЦИИ</span><b>↓</b></div>
+        </div>
+        <div class="riskchain__items reveal">
+          <h3>Что начинает страдать</h3>
+          <div class="riskitems">
+            <span class="riskitem"><i data-lucide="lightbulb"></i> Инновации</span>
+            <span class="riskitem"><i data-lucide="megaphone"></i> Реклама</span>
+            <span class="riskitem"><i data-lucide="settings"></i> Оборудование</span>
+            <span class="riskitem"><i data-lucide="flask-conical"></i> Развитие продукта</span>
+            <span class="riskitem"><i data-lucide="package"></i> Упаковка</span>
+            <span class="riskitem"><i data-lucide="shield-check"></i> Контроль качества</span>
+            <span class="riskitem"><i data-lucide="globe"></i> Расширение рынка</span>
+          </div>
+          <p class="riskchain__caption">Каждое из этих направлений требует денег — а денег становится всё меньше.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S10 ALTERNATIVES -->
+  <section class="slide" id="slide-11" data-index="11" data-section="t1" data-notes="Три альтернативы скидке.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 01 · Slide 10</span>
+        <h2 class="slide__title">Three Alternatives</h2>
+        <p class="slide__lead slide__lead--rich">
+          Вместо того чтобы снижать цену, можно <b>увеличить ценность</b> продукта.
+          Это три классических пути — каждый работает по-своему и усиливает бренд вместо того, чтобы его разрушать.
+        </p>
+      </header>
+      <div class="alts">
+        <article class="alt reveal">
+          <span class="alt__num">01</span>
+          <h3>ДИФФЕРЕНЦИАЦИЯ</h3>
+          <ul>
+            <li>Безлактозная продукция</li>
+            <li>Высокобелковые продукты</li>
+            <li>Пониженное содержание сахара</li>
+            <li>Премиальная линейка</li>
+            <li>Экологичная упаковка</li>
+          </ul>
+          <p class="alt__why"><b>Почему работает:</b> создаёт новый сегмент, где нет прямого сравнения по цене.</p>
+        </article>
+        <article class="alt reveal" style="--d:.07s">
+          <span class="alt__num">02</span>
+          <h3>ПРОГРАММА ЛОЯЛЬНОСТИ</h3>
+          <ul>
+            <li>Бонусы</li>
+            <li>Кэшбэк</li>
+            <li>Персональные предложения</li>
+            <li>Повторные покупки</li>
+          </ul>
+          <p class="alt__why"><b>Почему работает:</b> возвращает ценность после покупки, не ломая базовую цену.</p>
+          <button class="btn btn--mini" data-info="loyalty"><i data-lucide="info"></i> Подробнее</button>
+        </article>
+        <article class="alt reveal" style="--d:.14s">
+          <span class="alt__num">03</span>
+          <h3>МАРКЕТИНГ ЦЕННОСТИ</h3>
+          <ul>
+            <li>Качество</li>
+            <li>Безопасность</li>
+            <li>Свежесть</li>
+            <li>Пищевая ценность</li>
+            <li>Доверие</li>
+          </ul>
+          <p class="alt__why"><b>Почему работает:</b> покупатель платит не за товар, а за уверенность в нём.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- T1 · S11 VERDICT -->
+  <section class="slide slide--verdict" id="slide-12" data-index="12" data-section="t1" data-notes="Финал первой задачи.">
+    <div class="slide__inner">
+      <div class="verdict reveal">
+        <h2 class="verdict__title">
+          <span class="verdict__no">НЕ НУЖНО ПОБЕЖДАТЬ<br>В ЦЕНОВОЙ ВОЙНЕ.</span>
+          <span class="verdict__yes">НУЖНО ПОБЕДИТЬ<br>ЗА ПОКУПАТЕЛЯ.</span>
+        </h2>
+        <div class="verdict__formula">
+          <span class="tag tag--quality">Дифференциация</span>
+          <b>+</b>
+          <span class="tag tag--trust">Лояльность</span>
+          <b>+</b>
+          <span class="tag tag--value">Маркетинг ценности</span>
+        </div>
+        <blockquote class="verdict__quote">«Самый дешёвый продукт может выиграть сегодняшнюю покупку. Сильное ценностное предложение помогает выиграть покупателя надолго.»</blockquote>
+        <div class="verdict__takeaways">
+          <div class="takeaway"><b>1</b><span>Снижение цены — не стратегия, а реакция</span></div>
+          <div class="takeaway"><b>2</b><span>Маржа важнее объёма продаж</span></div>
+          <div class="takeaway"><b>3</b><span>Ценность работает дольше, чем скидка</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 2 DIVIDER -->
+  <section class="slide slide--divider" id="slide-13" data-index="13" data-section="t2" data-anchor="t2-promotion" data-notes="Вторая задача. Разработаем кампанию для нового продукта.">
+    <div class="slide__inner">
+      <div class="divider__wrap reveal">
+        <div class="divider__num">Task 02</div>
+        <h2 class="divider__title">DESIGNING AN<br><span>EFFECTIVE PROMOTION</span></h2>
+        <p class="divider__sub">Разработка рекламной кампании для нового продукта</p>
+        <div class="divider__meta">
+          <span class="chip"><i data-lucide="milk"></i> ORGANIC MILK</span>
+          <span class="chip"><i data-lucide="calendar-days"></i> 30 DAYS</span>
+        </div>
+        <p class="divider__question">Как соединить скидку и ценность продукта, чтобы привлечь и удержать покупателя?</p>
+        <ul class="divider__objectives">
+          <li><i data-lucide="check-circle-2"></i> Определить целевые сегменты и поставить измеримые цели</li>
+          <li><i data-lucide="check-circle-2"></i> Собрать воронку: от первого контакта до повторной покупки</li>
+          <li><i data-lucide="check-circle-2"></i> Распределить бюджет и определить KPI</li>
+        </ul>
+        <button class="btn btn--ghost" data-goto="14">Начать раздел <i data-lucide="arrow-down"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S01 PRODUCT -->
+  <section class="slide" id="slide-14" data-index="14" data-section="t2" data-notes="Продукт объединяет три ценности.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 01</span>
+        <h2 class="slide__title">Product</h2>
+        <p class="slide__lead slide__lead--rich">
+          Органическое молоко — <b>растущий сегмент</b>. За последние 5 лет спрос на органические продукты
+          в Казахстане вырос на 30%. Продукт хорошо монетизируется, но требует объяснения ценности:
+          покупатель должен понимать, <b>за что он платит на 20–30% больше обычного молока</b>.
+        </p>
+      </header>
+      <div class="product reveal">
+        <div class="product__main">
+          <div class="product__icon"><i data-lucide="milk"></i></div>
+          <h3>ORGANIC MILK</h3>
+          <p>Органическое молоко объединяет три ключевые ценности: здоровье, качество и устойчивое производство.</p>
+        </div>
+        <div class="product__pillars">
+          <div class="pillar">
+            <i data-lucide="heart-pulse"></i>
+            <b>ЗДОРОВЬЕ</b>
+            <span>Без антибиотиков и гормонов роста</span>
+          </div>
+          <div class="pillar">
+            <i data-lucide="badge-check"></i>
+            <b>КАЧЕСТВО</b>
+            <span>Контроль на каждом этапе производства</span>
+          </div>
+          <div class="pillar">
+            <i data-lucide="leaf"></i>
+            <b>УСТОЙЧИВОСТЬ</b>
+            <span>Ответственное отношение к природе</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S02 TARGET -->
+  <section class="slide" id="slide-15" data-index="15" data-section="t2" data-notes="Четыре сегмента.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 02</span>
+        <h2 class="slide__title">Target Market</h2>
+        <p class="slide__lead slide__lead--rich">
+          Четыре ключевых сегмента. Каждый имеет свой <b>мотив покупки</b>:
+          от питания детей до заботы об экологии. Это влияет на сообщение и канал коммуникации.
+        </p>
+      </header>
+      <div class="segments">
+        <article class="segment reveal">
+          <div class="segment__icon"><i data-lucide="users"></i></div>
+          <h3>Семьи</h3>
+          <p>Заботятся о питании детей и выбирают натуральные продукты. Готовы платить больше за безопасность.</p>
+        </article>
+        <article class="segment reveal" style="--d:.06s">
+          <div class="segment__icon"><i data-lucide="briefcase"></i></div>
+          <h3>Молодые специалисты</h3>
+          <p>Ценят удобство, качество и здоровый образ жизни в плотном графике. Основной канал — онлайн.</p>
+        </article>
+        <article class="segment reveal" style="--d:.12s">
+          <div class="segment__icon"><i data-lucide="heart-pulse"></i></div>
+          <h3>Следящие за здоровьем</h3>
+          <p>Осознанно выбирают продукт с высокой пищевой ценностью. Читают состав, следят за источниками.</p>
+        </article>
+        <article class="segment reveal" style="--d:.18s">
+          <div class="segment__icon"><i data-lucide="leaf"></i></div>
+          <h3>Экологически ответственные</h3>
+          <p>Поддерживают устойчивое производство и заботу о природе. Готовы к долгосрочной лояльности.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S03 OBJECTIVES -->
+  <section class="slide" id="slide-16" data-index="16" data-section="t2" data-notes="Три измеримые цели.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 03</span>
+        <h2 class="slide__title">Marketing Objectives</h2>
+        <p class="slide__lead slide__lead--rich">
+          Цели должны быть <b>измеримыми и достижимыми</b>. Мы ставим три конкретных KPI на 30 дней кампании.
+          Эти цифры потом лягут в основу оценки эффективности.
+        </p>
+      </header>
+      <div class="objectives">
+        <div class="objective reveal">
+          <span class="objective__value"><span class="counter" data-count="20" data-prefix="+" data-suffix="%">0%</span></span>
+          <span class="objective__label">Рост продаж</span>
+          <p class="objective__note">От базового уровня за 30 дней</p>
+        </div>
+        <div class="objective reveal" style="--d:.08s">
+          <span class="objective__value"><span class="counter" data-count="5000">0</span></span>
+          <span class="objective__label">Новых покупателей</span>
+          <p class="objective__note">Первая покупка в период акции</p>
+        </div>
+        <div class="objective reveal" style="--d:.16s">
+          <span class="objective__value"><span class="counter" data-count="15" data-suffix="%">0%</span></span>
+          <span class="objective__label">Повторные покупки</span>
+          <p class="objective__note">Ключевая метрика удержания</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S04 IDEA -->
+  <section class="slide" id="slide-17" data-index="17" data-section="t2" data-notes="Скидка временная — 30 дней.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 04</span>
+        <h2 class="slide__title">Promotional Idea</h2>
+        <p class="slide__lead slide__lead--rich">
+          Ключевое предложение кампании: <b>скидка −10% на 30 дней</b>. Важно, что скидка
+          <b>временная и ограниченная</b> — покупатель понимает, что это не «новая цена»,
+          а возможность попробовать продукт по сниженной цене.
+        </p>
+      </header>
+      <div class="promo reveal">
+        <div class="promo__slogan">
+          <span class="promo__slogan-quote" aria-hidden="true">«</span>
+          <h3>ПОПРОБУЙ<br>ORGANIC</h3>
+          <p class="promo__sub">Познакомься с продуктом — скидка как повод для первой покупки</p>
+        </div>
+        <div class="promo__price">
+          <div class="promo__old">600 KZT</div>
+          <div class="promo__arrow"><i data-lucide="arrow-down"></i></div>
+          <div class="promo__new">540 KZT</div>
+          <div class="promo__badge">−10%</div>
+        </div>
+        <div class="promo__note">
+          <i data-lucide="timer"></i>
+          <p>Скидка <b>временная</b> — действует только 30 дней. Это принципиально: покупатель должен понимать, что цена вернётся, а продукт — останется.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S05 FUNNEL -->
+  <section class="slide" id="slide-18" data-index="18" data-section="t2" data-notes="Воронка от контакта до возврата.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 05</span>
+        <h2 class="slide__title">Price + Non-Price</h2>
+        <p class="slide__lead slide__lead--rich">
+          Хорошая кампания — это <b>воронка</b>, а не одно сообщение.
+          На каждом этапе своя задача: скидка ловит внимание, дегустация создаёт опыт,
+          соцсети удерживают интерес, бонусы возвращают покупателя.
+        </p>
+      </header>
+      <div class="funnel reveal">
+        <div class="funnel__step funnel__step--1"><span>СКИДКА</span><i data-lucide="badge-percent"></i></div>
+        <div class="funnel__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="funnel__step funnel__step--2"><span>ДЕГУСТАЦИЯ</span><i data-lucide="utensils"></i></div>
+        <div class="funnel__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="funnel__step funnel__step--3"><span>SOCIAL MEDIA</span><i data-lucide="share-2"></i></div>
+        <div class="funnel__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="funnel__step funnel__step--4"><span>БОНУСЫ</span><i data-lucide="gift"></i></div>
+        <div class="funnel__arrow"><i data-lucide="arrow-down"></i></div>
+        <div class="funnel__step funnel__step--5"><span>ПОВТОРНАЯ ПОКУПКА</span><i data-lucide="refresh-cw"></i></div>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p><b>Принцип:</b> скидка приводит покупателя к первой покупке, но лояльность формирует <b>ценность продукта</b>, а не сама скидка.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S06 COMM -->
+  <section class="slide" id="slide-19" data-index="19" data-section="t2" data-notes="Единое сообщение.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 06</span>
+        <h2 class="slide__title">Communication</h2>
+        <p class="slide__lead slide__lead--rich">
+          Единое сообщение работает сильнее, чем набор разрозненных аргументов.
+          Мы используем один слоган и три столпа ценности — здоровье, качество, устойчивость.
+          Каждый канал и формат раскрывает один из них.
+        </p>
+      </header>
+      <h3 class="comm__headline reveal">«ЧИСТАЯ ПРИРОДА.<br>ЛУЧШИЙ ВЫБОР.»</h3>
+      <div class="comm__blocks">
+        <div class="comm__block reveal">
+          <i data-lucide="heart-pulse"></i>
+          <h4>ЗДОРОВЬЕ</h4>
+          <p>Натуральный продукт для ежедневного рациона. Подходит и детям, и взрослым.</p>
+        </div>
+        <div class="comm__block reveal" style="--d:.07s">
+          <i data-lucide="badge-check"></i>
+          <h4>КАЧЕСТВО</h4>
+          <p>Органическое происхождение и строгий контроль на каждом этапе производства.</p>
+        </div>
+        <div class="comm__block reveal" style="--d:.14s">
+          <i data-lucide="leaf"></i>
+          <h4>УСТОЙЧИВОСТЬ</h4>
+          <p>Ответственное производство и забота о природе — это часть философии бренда.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S07 DISTRIBUTION -->
+  <section class="slide" id="slide-20" data-index="20" data-section="t2" data-notes="Четыре канала.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 07</span>
+        <h2 class="slide__title">Distribution</h2>
+        <p class="slide__lead slide__lead--rich">
+          Каждый канал выполняет свою роль. Офлайн-полка обеспечивает массовость,
+          онлайн-доставка — удобство, соцсети — вовлечение, дегустации — <b>первый опыт продукта</b>,
+          который невозможно получить через рекламу.
+        </p>
+      </header>
+      <div class="channels">
+        <article class="channel reveal"><i data-lucide="shopping-cart"></i><h3>Супермаркеты</h3><p>Основная полка, массовый спрос</p></article>
+        <article class="channel reveal" style="--d:.06s"><i data-lucide="shopping-bag"></i><h3>Online grocery</h3><p>Доставка, заказ в приложении</p></article>
+        <article class="channel reveal" style="--d:.12s"><i data-lucide="instagram"></i><h3>Социальные сети</h3><p>Коммуникация и вовлечение</p></article>
+        <article class="channel reveal" style="--d:.18s"><i data-lucide="utensils"></i><h3>Дегустации</h3><p>Личный опыт и первая проба</p></article>
+      </div>
+      <div class="callout reveal">
+        <i data-lucide="route"></i>
+        <p>Продукт должен встречать покупателя <b>в каждой точке контакта</b> — от полки в магазине до ленты в соцсетях.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S08 DIGITAL -->
+  <section class="slide" id="slide-21" data-index="21" data-section="t2" data-notes="Четыре типа контента.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 08</span>
+        <h2 class="slide__title">Digital Communication</h2>
+        <p class="slide__lead slide__lead--rich">
+          Цифровой канал — не «посты ради постов». Мы используем <b>4 типа контента</b>,
+          каждый решает свою задачу: объясняет, вдохновляет, продаёт или напоминает об акции.
+        </p>
+      </header>
+      <div class="contentgrid">
+        <article class="content reveal">
+          <div class="content__icon"><i data-lucide="graduation-cap"></i></div>
+          <h3>Образовательный</h3>
+          <p>«Что отличает органическое молоко?» — объясняем ценность и снимаем сомнения.</p>
+        </article>
+        <article class="content reveal" style="--d:.06s">
+          <div class="content__icon"><i data-lucide="sun"></i></div>
+          <h3>Lifestyle</h3>
+          <p>«Полезный завтрак за 30 секунд» — встраиваем продукт в реальную жизнь.</p>
+        </article>
+        <article class="content reveal" style="--d:.12s">
+          <div class="content__icon"><i data-lucide="milk"></i></div>
+          <h3>Продуктовый</h3>
+          <p>«Качество + вкус + происхождение» — показываем сам продукт.</p>
+        </article>
+        <article class="content reveal" style="--d:.18s">
+          <div class="content__icon"><i data-lucide="badge-percent"></i></div>
+          <h3>Акционный</h3>
+          <p>«−10% только 30 дней» — создаём срочность и подталкиваем к первой покупке.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S09 BUDGET -->
+  <section class="slide" id="slide-22" data-index="22" data-section="t2" data-notes="Бюджет 1 млн KZT.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 09</span>
+        <h2 class="slide__title">Budget</h2>
+        <p class="slide__lead slide__lead--rich">
+          Общий бюджет кампании — <b>1 000 000 KZT</b> на 30 дней.
+          Распределение отражает приоритеты: 50% идёт в digital и инфлюенсеров,
+          ещё 20% — в офлайн-активности, оставшееся — в поддержку и контент.
+        </p>
+      </header>
+      <div class="twocol twocol--budget">
+        <div class="chartbox chartbox--donut reveal">
+          <canvas id="chart-budget" aria-label="Диаграмма распределения бюджета"></canvas>
+          <div class="donut-center">
+            <span class="donut-center__value"><span class="counter" data-count="1000000">0</span></span>
+            <span class="donut-center__unit">KZT</span>
+          </div>
+        </div>
+        <div class="budget__legend reveal">
+          <ul>
+            <li><span class="dot dot--1"></span><b>Digital-реклама</b><span class="amt">300 000 KZT · 30%</span></li>
+            <li><span class="dot dot--2"></span><b>Продвижение в магазинах</b><span class="amt">200 000 KZT · 20%</span></li>
+            <li><span class="dot dot--3"></span><b>Influencer marketing</b><span class="amt">200 000 KZT · 20%</span></li>
+            <li><span class="dot dot--4"></span><b>Дегустации</b><span class="amt">150 000 KZT · 15%</span></li>
+            <li><span class="dot dot--5"></span><b>Рекламные материалы</b><span class="amt">100 000 KZT · 10%</span></li>
+            <li><span class="dot dot--6"></span><b>Создание контента</b><span class="amt">50 000 KZT · 5%</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S10 KPI -->
+  <section class="slide" id="slide-23" data-index="23" data-section="t2" data-notes="Шесть KPI.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 02 · Slide 10</span>
+        <h2 class="slide__title">KPI Dashboard</h2>
+        <p class="slide__lead slide__lead--rich">
+          Шесть метрик, которые мы отслеживаем. Первые три — <b>коммерческие</b>,
+          вторые три — <b>коммуникационные</b>. Вместе они дают полную картину эффективности кампании.
+        </p>
+      </header>
+      <div class="kpis">
+        <div class="kpi reveal"><span class="kpi__value"><span class="counter" data-count="20" data-prefix="+" data-suffix="%">0%</span></span><span class="kpi__label">Sales</span><span class="kpi__hint">Рост продаж</span></div>
+        <div class="kpi reveal" style="--d:.05s"><span class="kpi__value"><span class="counter" data-count="5000">0</span></span><span class="kpi__label">New Customers</span><span class="kpi__hint">Первая покупка</span></div>
+        <div class="kpi reveal" style="--d:.1s"><span class="kpi__value"><span class="counter" data-count="15" data-suffix="%">0%</span></span><span class="kpi__label">Repeat Purchase</span><span class="kpi__hint">Повторная покупка</span></div>
+        <div class="kpi reveal" style="--d:.15s"><span class="kpi__value"><span class="counter" data-count="500000">0</span></span><span class="kpi__label">Reach</span><span class="kpi__hint">Охват аудитории</span></div>
+        <div class="kpi reveal" style="--d:.2s"><span class="kpi__value"><span class="counter" data-count="5" data-suffix="%+">0%</span></span><span class="kpi__label">Engagement</span><span class="kpi__hint">Вовлечённость</span></div>
+        <div class="kpi reveal" style="--d:.25s"><span class="kpi__value"><span class="counter" data-count="3" data-suffix="%+">0%</span></span><span class="kpi__label">Conversion</span><span class="kpi__hint">Конверсия в покупку</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T2 · S11 JOURNEY -->
+  <section class="slide slide--t2final" id="slide-24" data-index="24" data-section="t2" data-notes="Клиентский путь.">
+    <div class="slide__inner">
+      <div class="custjourney reveal">
+        <h2 class="custjourney__title">Customer Journey</h2>
+        <p class="custjourney__lead">Пять этапов, через которые проходит покупатель — от первого контакта до возвращения за продуктом.</p>
+        <div class="custjourney__path">
+          <span class="cj-step"><i data-lucide="eye"></i><b>УВИДЕЛ</b></span>
+          <i class="cj-arrow" data-lucide="arrow-down"></i>
+          <span class="cj-step"><i data-lucide="utensils"></i><b>ПОПРОБОВАЛ</b></span>
+          <i class="cj-arrow" data-lucide="arrow-down"></i>
+          <span class="cj-step"><i data-lucide="shopping-cart"></i><b>КУПИЛ</b></span>
+          <i class="cj-arrow" data-lucide="arrow-down"></i>
+          <span class="cj-step"><i data-lucide="star"></i><b>ОЦЕНИЛ</b></span>
+          <i class="cj-arrow" data-lucide="arrow-down"></i>
+          <span class="cj-step cj-step--accent"><i data-lucide="refresh-cw"></i><b>ВЕРНУЛСЯ</b></span>
+        </div>
+        <blockquote class="custjourney__quote">«Скидка привлекает внимание. Ценность продукта создаёт лояльность.»</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 3 DIVIDER -->
+  <section class="slide slide--divider" id="slide-25" data-index="25" data-section="t3" data-anchor="t3-roi" data-notes="Третья задача — экономическая оценка.">
+    <div class="slide__inner">
+      <div class="divider__wrap reveal">
+        <div class="divider__num">Task 03</div>
+        <h2 class="divider__title">PROMOTION<br><span>EFFECTIVENESS &amp; ROI</span></h2>
+        <p class="divider__sub">Экономическая оценка эффективности продвижения</p>
+        <div class="divider__meta"><span class="chip"><i data-lucide="calculator"></i> Расчёт ROI</span></div>
+        <p class="divider__question divider__question--big">«Кампания выглядела успешной. Но была ли она прибыльной?»</p>
+        <ul class="divider__objectives">
+          <li><i data-lucide="check-circle-2"></i> Различить рост выручки и рост прибыли</li>
+          <li><i data-lucide="check-circle-2"></i> Освоить расчёт маржинального вклада и ROI</li>
+          <li><i data-lucide="check-circle-2"></i> Принять управленческое решение на основе цифр</li>
+        </ul>
+        <button class="btn btn--ghost" data-goto="26">Начать раздел <i data-lucide="arrow-down"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S01 -->
+  <section class="slide" id="slide-26" data-index="26" data-section="t3" data-notes="Исходные данные.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 01</span>
+        <h2 class="slide__title">Before vs During</h2>
+        <p class="slide__lead slide__lead--rich">
+          У нас есть <b>4 числа</b> — и этого достаточно, чтобы честно оценить кампанию.
+          Сравниваем два периода: до акции и во время. Ключевые изменения — цена, объём и расходы на промо.
+        </p>
+      </header>
+      <div class="comparetable reveal">
+        <table>
+          <thead><tr><th>Показатель</th><th>До</th><th>Во время</th></tr></thead>
+          <tbody>
+            <tr><td><b>Продано (единиц)</b></td><td>10 000</td><td class="up">14 000</td></tr>
+            <tr><td><b>Цена за единицу</b></td><td>$5.00</td><td class="down">$4.25</td></tr>
+            <tr><td><b>Переменные затраты</b></td><td>$2.50</td><td>$2.50</td></tr>
+            <tr><td><b>Расходы на продвижение</b></td><td>—</td><td class="down">$3 000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p>Обратите внимание: скидка <b>−15%</b> ($5.00 → $4.25) привела к росту продаж <b>+40%</b>. Уже интересно — стоит ли это того?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S02 -->
+  <section class="slide" id="slide-27" data-index="27" data-section="t3" data-notes="Продажи +40%.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 02</span>
+        <h2 class="slide__title">Sales Volume</h2>
+        <p class="slide__lead slide__lead--rich">
+          Объём продаж вырос на <b>40%</b> — с 10 000 до 14 000 единиц.
+          На первый взгляд — отличный результат. Именно на этой цифре обычно останавливаются менеджеры по продажам.
+        </p>
+      </header>
+      <div class="salesvol reveal">
+        <div class="salesvol__numbers">
+          <span class="salesvol__before"><span class="counter" data-count="10000">0</span></span>
+          <span class="salesvol__arrow"><i data-lucide="arrow-down"></i></span>
+          <span class="salesvol__after"><span class="counter" data-count="14000">0</span></span>
+        </div>
+        <div class="salesvol__growth">+<span class="counter" data-count="40" data-suffix="%">0%</span></div>
+        <p class="salesvol__note">«На первый взгляд акция выглядит успешной.»</p>
+      </div>
+      <div class="callout callout--warn reveal">
+        <i data-lucide="alert-triangle"></i>
+        <p>Но <b>продажи — это только объём</b>. Чтобы понять экономику, нужно посмотреть на выручку и маржу.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S03 -->
+  <section class="slide" id="slide-28" data-index="28" data-section="t3" data-notes="Выручка выросла.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 03</span>
+        <h2 class="slide__title">Revenue</h2>
+        <p class="slide__lead slide__lead--rich">
+          Выручка тоже выросла — с $50 000 до $59 500, то есть на <b>+19%</b>.
+          Меньше, чем объём (+40%), потому что часть роста «съела» сниженная цена.
+          Это первый сигнал, что не всё так однозначно.
+        </p>
+      </header>
+      <div class="twocol twocol--chart">
+        <div class="stats-stack reveal">
+          <div class="revenue__formula">
+            <div class="rf-row"><span>До:</span><b>10 000 × $5.00 = $50,000</b></div>
+            <div class="rf-row"><span>Во время:</span><b>14 000 × $4.25 = $59,500</b></div>
+          </div>
+          <div class="statcard statcard--accent">
+            <span class="statcard__label">Рост выручки</span>
+            <span class="statcard__value"><span class="counter" data-count="9500" data-prefix="+$" data-sep=",">$0</span></span>
+            <span class="statcard__unit">+19% к базовому уровню</span>
+          </div>
+        </div>
+        <div class="chartbox reveal">
+          <canvas id="chart-revenue" aria-label="График выручки"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S04 -->
+  <section class="slide" id="slide-29" data-index="29" data-section="t3" data-notes="Маржинальный вклад упал.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 04</span>
+        <h2 class="slide__title">Contribution</h2>
+        <p class="slide__lead slide__lead--rich">
+          А вот теперь — <b>настоящая картина</b>. Считаем маржинальный вклад:
+          сколько остаётся с каждой проданной единицы после переменных затрат.
+          Он <b>упал</b> — несмотря на рост продаж.
+        </p>
+        <button class="btn btn--mini" data-info="contribution"><i data-lucide="info"></i> Что такое маржинальный вклад?</button>
+      </header>
+      <div class="twocol twocol--chart">
+        <div class="stats-stack reveal">
+          <div class="revenue__formula">
+            <div class="rf-row"><span>До:</span><b>10 000 × ($5.00 − $2.50) = $25,000</b></div>
+            <div class="rf-row"><span>Во время:</span><b>14 000 × ($4.25 − $2.50) = $24,500</b></div>
+          </div>
+          <div class="contribution__delta">
+            <span class="contribution__value">−<span class="counter" data-count="500" data-prefix="$">0</span></span>
+            <span class="contribution__label">изменение вклада</span>
+          </div>
+        </div>
+        <div class="chartbox reveal">
+          <canvas id="chart-contribution" aria-label="График маржинального вклада"></canvas>
+        </div>
+      </div>
+      <div class="callout callout--warn reveal">
+        <i data-lucide="alert-triangle"></i>
+        <p><b>Ключевой вывод:</b> компания продала <b>на 4 000 единиц больше</b>, но получила <b>меньший маржинальный вклад</b>. Скидка «съела» больше, чем принёс дополнительный объём.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S05 -->
+  <section class="slide" id="slide-30" data-index="30" data-section="t3" data-notes="Итог −$3 500.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 05</span>
+        <h2 class="slide__title">Net Result</h2>
+        <p class="slide__lead slide__lead--rich">
+          Складываем два эффекта: <b>изменение вклада</b> и <b>расходы на продвижение</b>.
+          Получаем чистый экономический результат кампании.
+        </p>
+      </header>
+      <div class="netresult reveal">
+        <div class="netresult__row"><span class="netresult__label">Изменение маржинального вклада</span><span class="netresult__value netresult__value--neg">−$500</span></div>
+        <div class="netresult__plus">+</div>
+        <div class="netresult__row"><span class="netresult__label">Расходы на продвижение</span><span class="netresult__value netresult__value--neg">−$3,000</span></div>
+        <div class="netresult__line"></div>
+        <div class="netresult__total"><span class="netresult__label">Чистый результат</span><span class="netresult__value netresult__value--big">−$3,500</span></div>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p>Компания <b>потеряла $3 500</b> на кампании, которая выглядела успешной по продажам.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S06 ROI -->
+  <section class="slide" id="slide-31" data-index="31" data-section="t3" data-notes="Интерактивный ROI-калькулятор.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 06</span>
+        <h2 class="slide__title">ROI</h2>
+        <p class="slide__lead slide__lead--rich">
+          <b>ROI</b> — финальная метрика эффективности продвижения. Показывает, сколько прибыли
+          принёс каждый доллар, вложенный в кампанию. <b>Двигайте слайдеры</b> — и увидите,
+          при каких параметрах кампания становится прибыльной.
+        </p>
+        <button class="btn btn--mini" data-info="roi"><i data-lucide="info"></i> Формула ROI</button>
+      </header>
+
+      <div class="roi-calc reveal">
+        <div class="roi-calc__controls">
+          <label class="roi-calc__field">
+            <span>Глубина скидки</span>
+            <input type="range" id="roiDiscount" min="0" max="30" value="15" step="1" />
+            <b id="roiDiscountVal">15%</b>
+          </label>
+          <label class="roi-calc__field">
+            <span>Рост продаж</span>
+            <input type="range" id="roiGrowth" min="0" max="80" value="40" step="1" />
+            <b id="roiGrowthVal">40%</b>
+          </label>
+          <label class="roi-calc__field">
+            <span>Бюджет промо</span>
+            <input type="range" id="roiBudget" min="0" max="10000" value="3000" step="250" />
+            <b id="roiBudgetVal">$3 000</b>
+          </label>
+        </div>
+
+        <div class="roi-calc__result">
+          <div class="roi-calc__stat">
+            <span class="roi-calc__label">Маржа до</span>
+            <b class="roi-calc__num" id="roiMarginBefore">$25,000</b>
+          </div>
+          <div class="roi-calc__stat">
+            <span class="roi-calc__label">Маржа во время</span>
+            <b class="roi-calc__num" id="roiMarginDuring">$24,500</b>
+          </div>
+          <div class="roi-calc__stat">
+            <span class="roi-calc__label">Чистый результат</span>
+            <b class="roi-calc__num" id="roiNet">−$3,500</b>
+          </div>
+          <div class="roi-calc__stat roi-calc__stat--big" id="roiResultBox">
+            <span class="roi-calc__label">ROI</span>
+            <b class="roi-calc__num roi-calc__num--big" id="roiResult">−116.7%</b>
+          </div>
+        </div>
+
+        <p class="roi-calc__hint" id="roiHint">
+          Отрицательный ROI: дополнительный экономический эффект не покрыл расходы.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S07 -->
+  <section class="slide" id="slide-32" data-index="32" data-section="t3" data-notes="Разные метрики — разные ответы.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 07</span>
+        <h2 class="slide__title">Was It Successful?</h2>
+        <p class="slide__lead slide__lead--rich">
+          Один и тот же период даёт <b>разные ответы</b> — в зависимости от того,
+          какую метрику мы считаем главной. Продажи и выручка говорят «да»,
+          прибыльность и ROI — «нет».
+        </p>
+      </header>
+      <div class="verdictgrid">
+        <div class="verdictcard verdictcard--yes reveal">
+          <div class="verdictcard__icon"><i data-lucide="check"></i></div>
+          <h3>Продажи</h3>
+          <span class="verdictcard__answer verdictcard__answer--yes">ДА ✓</span>
+          <p class="verdictcard__note">+40% объёма</p>
+        </div>
+        <div class="verdictcard verdictcard--yes reveal" style="--d:.06s">
+          <div class="verdictcard__icon"><i data-lucide="check"></i></div>
+          <h3>Выручка</h3>
+          <span class="verdictcard__answer verdictcard__answer--yes">ДА ✓</span>
+          <p class="verdictcard__note">+19% выручки</p>
+        </div>
+        <div class="verdictcard verdictcard--no reveal" style="--d:.12s">
+          <div class="verdictcard__icon"><i data-lucide="x"></i></div>
+          <h3>Прибыльность</h3>
+          <span class="verdictcard__answer verdictcard__answer--no">НЕТ ✕</span>
+          <p class="verdictcard__note">−$500 вклада</p>
+        </div>
+        <div class="verdictcard verdictcard--no reveal" style="--d:.18s">
+          <div class="verdictcard__icon"><i data-lucide="x"></i></div>
+          <h3>ROI</h3>
+          <span class="verdictcard__answer verdictcard__answer--no">НЕТ ✕</span>
+          <p class="verdictcard__note">−116.7%</p>
+        </div>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p><b>Урок:</b> правильный набор метрик — не «продажи», а <b>«продажи + маржа + ROI»</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S08 DECISION -->
+  <section class="slide slide--decision" id="slide-33" data-index="33" data-section="t3" data-notes="Решение — модифицировать.">
+    <div class="slide__inner">
+      <div class="decision reveal">
+        <h2 class="decision__title">МОДИФИЦИРОВАТЬ</h2>
+        <p class="decision__sub">Управленческое решение на основе цифр</p>
+        <ul class="decision__list">
+          <li><i data-lucide="minus-circle"></i><span>Не продолжать без изменений — скидка −15% убыточна.</span></li>
+          <li><i data-lucide="minus-circle"></i><span>Не полностью прекращать продвижение — рост продаж есть.</span></li>
+          <li><i data-lucide="settings-2"></i><span><b>Изменить механику акции</b> — уменьшить скидку, добавить ценность.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S09 NEW MODEL -->
+  <section class="slide" id="slide-34" data-index="34" data-section="t3" data-notes="Новая модель: меньше скидка, больше ценность.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 09</span>
+        <h2 class="slide__title">New Promotion Model</h2>
+        <p class="slide__lead slide__lead--rich">
+          Вместо глубокой скидки — <b>меньшая скидка + неценовая ценность</b>.
+          Так мы сохраняем маржу и одновременно даём покупателю больше поводов
+          вернуться.
+        </p>
+      </header>
+      <div class="models">
+        <article class="model model--old reveal">
+          <h3>СТАРАЯ МОДЕЛЬ</h3>
+          <div class="model__price">$5.00 <i data-lucide="arrow-right"></i> $4.25</div>
+          <p class="model__note">Скидка −15%, маржа с единицы — $1.75</p>
+        </article>
+        <div class="models__arrow reveal"><i data-lucide="arrow-down"></i></div>
+        <article class="model model--new reveal">
+          <h3>НОВАЯ МОДЕЛЬ</h3>
+          <div class="model__price">$5.00 <i data-lucide="arrow-right"></i> $4.60</div>
+          <p class="model__note">Скидка −8%, маржа с единицы — $2.10</p>
+          <div class="model__tags">
+            <span class="tag tag--value">+ Бонусы</span>
+            <span class="tag tag--trust">+ Наборы</span>
+            <span class="tag tag--quality">+ Дегустации</span>
+            <span class="tag tag--innovation">+ Персональные предложения</span>
+          </div>
+        </article>
+      </div>
+      <div class="keybox reveal">
+        <i data-lucide="key-round"></i>
+        <p>Задача новой модели — <b>сохранить маржу и одновременно увеличить ценность</b> для покупателя. Дополнительные механики не так сильно бьют по экономике, как глубокая скидка.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S10 RECOMMENDATIONS -->
+  <section class="slide" id="slide-35" data-index="35" data-section="t3" data-notes="Три рекомендации.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 10</span>
+        <h2 class="slide__title">Three Recommendations</h2>
+        <p class="slide__lead slide__lead--rich">
+          Что делать бизнесу, чтобы следующая кампания не повторила ошибок предыдущей.
+          Три конкретные рекомендации — по цене, по механикам и по метрикам.
+        </p>
+      </header>
+      <div class="recommendations">
+        <article class="recommendation reveal">
+          <span class="recommendation__num">01</span>
+          <h3>Уменьшить размер скидки</h3>
+          <p>Тестировать <b>5–8%</b> вместо 15%. Меньшая скидка требует меньшего роста продаж для окупаемости.</p>
+        </article>
+        <article class="recommendation reveal" style="--d:.07s">
+          <span class="recommendation__num">02</span>
+          <h3>Использовать неценовое продвижение</h3>
+          <p>Бонусы, программы лояльности, наборы, подарки — они создают ценность без прямых потерь маржи.</p>
+        </article>
+        <article class="recommendation reveal" style="--d:.14s">
+          <span class="recommendation__num">03</span>
+          <h3>Измерять не только продажи</h3>
+          <p>Смотреть на полный набор метрик, а не только на объём.</p>
+          <div class="recommendation__metrics">
+            <span class="metric-chip">Sales</span>
+            <span class="metric-chip">Revenue</span>
+            <span class="metric-chip">Contribution</span>
+            <span class="metric-chip">Costs</span>
+            <span class="metric-chip">ROI</span>
+            <span class="metric-chip">Repeat Purchase</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- T3 · S11 DASHBOARD -->
+  <section class="slide" id="slide-36" data-index="36" data-section="t3" data-notes="Финальные выводы.">
+    <div class="slide__inner">
+      <header class="slide__head reveal">
+        <span class="kicker">Task 03 · Slide 11</span>
+        <h2 class="slide__title">Final Dashboard</h2>
+        <p class="slide__lead slide__lead--rich">
+          Три вывода, объединяющие весь анализ. Они универсальны — работают для любой
+          категории FMCG, не только для молочного рынка.
+        </p>
+      </header>
+      <div class="finaldash">
+        <article class="fd-block reveal">
+          <span class="fd-block__num">01</span>
+          <h3>ЦЕНОВАЯ ВОЙНА</h3>
+          <p>Снижение цены может увеличить продажи, но разрушить маржу. Победа в объёме — не победа в бизнесе.</p>
+        </article>
+        <div class="fd-arrow reveal"><i data-lucide="arrow-down"></i></div>
+        <article class="fd-block reveal" style="--d:.07s">
+          <span class="fd-block__num">02</span>
+          <h3>ПРОДВИЖЕНИЕ</h3>
+          <p>Правильное сочетание цены и ценности привлекает покупателя сильнее, чем самая глубокая скидка.</p>
+        </article>
+        <div class="fd-arrow reveal"><i data-lucide="arrow-down"></i></div>
+        <article class="fd-block fd-block--accent reveal" style="--d:.14s">
+          <span class="fd-block__num">03</span>
+          <h3>ROI</h3>
+          <p>Рост продаж должен создавать экономическую ценность. Если ROI отрицательный — кампания не работает.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="slide slide--final" id="slide-37" data-index="37" data-section="final" data-notes="Финал.">
+    <div class="final__grid" aria-hidden="true"></div>
+    <div class="slide__inner">
+      <div class="final__titleblock reveal">
+        <h2 class="final__title">MARKETING<br>MANAGEMENT</h2>
+        <p class="final__sub">Необходимо оптимизировать не только продажи.</p>
+      </div>
+      <div class="final__pillars reveal">
+        <span class="final__pillar">КЛИЕНТ</span><b>+</b>
+        <span class="final__pillar">БРЕНД</span><b>+</b>
+        <span class="final__pillar">МАРЖА</span><b>+</b>
+        <span class="final__pillar final__pillar--accent">ДОЛГОСРОЧНАЯ ЦЕННОСТЬ</span>
+      </div>
+      <div class="final__question reveal">
+        <h3>Что лучше?</h3>
+        <div class="final__choices">
+          <div class="final__choice final__choice--a">
+            <p>Продать <b>100 000</b> единиц с низкой прибыльностью?</p>
+            <span>или</span>
+          </div>
+          <div class="final__choice final__choice--b">
+            <p>Продать <b>90 000</b> единиц с устойчивой маржой?</p>
+          </div>
+        </div>
+      </div>
+      <div class="final__message reveal">
+        <p>Цель маркетинга — не просто продать больше.</p>
+        <p class="final__message-accent">Цель — создать устойчивую ценность одновременно для клиента и компании.</p>
+      </div>
+      <div class="final__formula reveal">
+        <span>ЦЕНА</span><i data-lucide="arrow-right"></i><span>ПРОДВИЖЕНИЕ</span><i data-lucide="arrow-right"></i><span class="final__formula-accent">ПРИБЫЛЬНОСТЬ</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="controls" aria-label="Управление презентацией">
+  <button class="ctrlbtn" id="prevBtn" aria-label="Предыдущий слайд"><i data-lucide="arrow-left"></i></button>
+  <div class="controls__dots" id="controlsDots" role="tablist" aria-label="Слайды"></div>
+  <button class="ctrlbtn" id="nextBtn" aria-label="Следующий слайд"><i data-lucide="arrow-right"></i></button>
+</div>
+
+<button class="totop" id="toTopBtn" aria-label="Наверх"><i data-lucide="arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
